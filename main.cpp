@@ -88,8 +88,8 @@ int main() {
     auto procs = getJavaws();
     if (procs.empty()) return printf("[-] No javaw.exe processes found\n"), 0;
 
-    const char* msg[] = {"Clean", "DoomsDay Fuck #1", "DoomsDay Fuck #2", "DoomsDay Fuck #3"};
-    string_view sig[] = {"", "", "OgUwQPNl", "CQauDfNVDeQv_xfM`Bn"};
+    const char* msg[] = {"Clean", "DoomsDay Fuck #1", "DoomsDay Fuck #2", "DoomsDay Fuck #3", "DoomsDay Fuck #4"};
+    string_view sig[] = {"", "", "OgUwQPNl", "CQauDfNVDeQv_xfM`Bn", "IZn]laU"};
 
     for (auto& p : procs) {
         int d = checkJmap(p) ? 1 : scanMem(p.pid, sig[2]) ? 2 : scanMem(p.pid, sig[3]) ? 3 : 0;
