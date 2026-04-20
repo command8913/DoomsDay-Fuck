@@ -92,7 +92,7 @@ int main() {
     string_view sig[] = {"", "", "OgUwQPNl", "CQauDfNVDeQv_xfM`Bn", "IZn]laU"};
 
     for (auto& p : procs) {
-        int d = checkJmap(p) ? 1 : scanMem(p.pid, sig[2]) ? 2 : scanMem(p.pid, sig[3]) ? 3 : 0;
+        int d = checkJmap(p) ? 1 : scanMem(p.pid, sig[2]) ? 2 : scanMem(p.pid, sig[3]) ? 3 : scanMem(p.pid, sig[4]) ? 4 : 0;
         printf("[%s] PID: %lu - %s\n", d ? "+" : "-", p.pid, msg[d]);
     }
 }
